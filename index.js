@@ -1,5 +1,5 @@
 // const http = require('http');
- 
+import fs from 'fs';
 import http from 'http';
 import sum,{a} from './app.js';
 import {mul} from './app.js';
@@ -18,3 +18,11 @@ let port =100;
 server.listen(port,()=>{
     console.log(`server is running on port ${port}`)
 });
+
+const data = fs.readFileSync(
+  'C:/Users/HHC/Desktop/Adeeb Bashir.txt'
+  
+);
+
+console.log("File read successfully");
+console.log(data);
